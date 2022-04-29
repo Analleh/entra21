@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class atividade1 {
 
     public static void main(String[] args) {
-        exer19();
+        exer18();
 
 
     }
@@ -132,6 +132,9 @@ public class atividade1 {
         System.out.println("Valor de 28% do distribuidor: R$" + dist);
         System.out.println("Valor de 45% de impostos: R$" + imp);
         System.out.println("O valor final do carro para o consumidor: R$" + car);
+        /*
+
+        */
     }
 
     public static void exer8() {
@@ -322,27 +325,29 @@ public class atividade1 {
     public static void exer18() {
 
         Scanner ler = new Scanner(System.in);
-        double hora, valor, extra, sal;
+        double  valor1, valor2, horaExtra, sal,aux;
+        int hora;
         System.out.println("Informe quantas horas você trabalhou no mês:");
-        hora = ler.nextDouble();
+        hora = ler.nextInt();
         System.out.println("Informe o valor das horas: ");
-        valor = ler.nextDouble();
-
-        hora = hora * valor;
-        sal = hora;
-
-        if(hora > 200.0){
+        valor1 = ler.nextDouble();
 
 
-            extra = hora - 200;
-            valor = (valor * 50)/100;
-            extra = extra * valor;
-            sal = hora + extra;
-            System.out.println("O salário final é: R$" + sal);
+        if(hora > 200){
 
-        } else if (hora == 200 || hora <200) {
+            horaExtra = hora - 200;
+            valor2 = (valor1 * 50)/100;
+            valor2 = valor2 + valor1;
+            aux = (hora - horaExtra) * valor1;
+            horaExtra = horaExtra * valor2;
+            sal = aux + horaExtra;
+            System.out.printf("O salário final é: R$%.2f" , sal);
 
-            System.out.println("O salário final é: R$" + sal);
+        } else  {
+
+            aux = hora * valor1;
+            sal = aux;
+            System.out.printf("O salário final é: R$%.2f" , sal);
 
         }
 
@@ -355,29 +360,120 @@ public class atividade1 {
         String nome;
         double altura, peso;
         String sexo;
-        
+
 
         System.out.println("Informe seu nome: ");
-        nome = ler.next();
+        nome = ler.nextLine();
         System.out.println("Informe sua altura: ");
         altura = ler.nextDouble();
-        System.out.println(" informe seu sexo (m,f)");
-        sexo = ler.next();
+        System.out.println("Informe seu sexo (m,f)");
+        ler.nextLine();
+        sexo = ler.nextLine();
 
-        if (sexo == "m"){
+
+        if (sexo.equals("m")){
 
             peso = (72.7 * altura) - 58;
             System.out.println( nome + ", seu peso ideal é: " + peso);
 
         }
-        else if (sexo == "f"){
+        else if (sexo.equals("f")){
 
             peso = (62.1 * altura) - 44.7;
             System.out.println( nome + ", seu peso ideal é: " + peso);
         }
+        else {
+            System.out.println("Caracter inválido!");
+        }
+
     }
 
     public static void exer20(){
+
+        Scanner ler = new Scanner(System.in);
+        double salFixo,salTotal ,vendas, comi1, comi2;
+        System.out.println("Informe seu salário atual: ");
+        salFixo = ler.nextDouble();
+        System.out.println("Informe o valor das suas vendas: ");
+        vendas = ler.nextDouble();
+
+        if(vendas <= 1500){
+
+            comi1 = (vendas * 3)/100;
+            salTotal = salFixo + comi1;
+            System.out.printf("Seu salário é: R$%.2f", salTotal);
+
+        }
+        else {
+
+           comi1 = 1500;
+           comi2 = vendas - 1500;
+           comi1 = (comi1 * 3)/100;
+           comi2 = (comi2 * 5)/100;
+           salTotal = salFixo + comi1 + comi2;
+           System.out.printf("Seu salário é: R$%.2f", salTotal);
+        }
+
+
+
+
+    }
+    public static void exer21(){
+        Scanner ler = new Scanner(System.in);
+        int conta;
+        double saldo,saldoAtual, deb, cred;
+        System.out.println("Insira o número da conta sem pontos: ");
+        conta = ler.nextInt();
+        System.out.println("Insira o saldo da conta: ");
+        saldo = ler.nextDouble();
+        System.out.println("Insira o valor do débito da conta: ");
+        deb = ler.nextDouble();
+        System.out.println("Insira o valor do crédito da conta: ");
+        cred = ler.nextDouble();
+
+        saldoAtual = saldo - deb + cred;
+        if (saldoAtual >= 0){
+
+            System.out.println("Saldo atual: " + saldoAtual);
+            System.out.println("Saldo positivo");
+
+        }
+        else {
+
+            System.out.println("Saldo atual: " + saldoAtual);
+            System.out.println("Saldo negativo");
+        }
+
+    }
+
+    public static void exer22(){
+
+        Scanner ler = new Scanner(System.in);
+        int qtdAtual, qtdMaxima,qtdMinima;
+        double qtdMedia;
+        System.out.println("Insira a quantidade atual do estoque:");
+        qtdAtual = ler.nextInt();
+        System.out.println("Insira a quantidade máxima do estoque:");
+        qtdMaxima = ler.nextInt();
+        System.out.println("Insira a quantidade mínima do estoque:");
+        qtdMinima = ler.nextInt();
+
+        qtdMedia = (qtdMaxima + qtdMinima)/2;
+
+        if (qtdAtual >= qtdMedia){
+
+            System.out.println("Quantidade em estoque: " + qtdAtual);
+            System.out.println("Quantidade média: " + qtdMedia);
+            System.out.println("Não efutuar compra");
+        }
+        else {
+
+            System.out.println("Quantidade em estoque: " + qtdAtual);
+            System.out.println("Quantidade média: " + qtdMedia);
+            System.out.println("Efetuar compra");
+        }
+
+
 
 
     }
