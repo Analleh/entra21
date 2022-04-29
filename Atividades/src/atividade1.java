@@ -1,12 +1,10 @@
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Scanner;
 
 
 public class atividade1 {
 
     public static void main(String[] args) {
-        exer15();
+        exer19();
 
 
     }
@@ -40,8 +38,9 @@ public class atividade1 {
 
 
     }
-    public static void exer3(){
-        double a,b;
+
+    public static void exer3() {
+        double a, b;
         Scanner ler = new Scanner(System.in);
         System.out.println("Insira a altura do retângulo:");
         a = ler.nextDouble();
@@ -49,13 +48,14 @@ public class atividade1 {
         b = ler.nextDouble();
 
         double area = a * b;
-        double per = (2*a) + (2*b);
+        double per = (2 * a) + (2 * b);
 
         System.out.println(" A área do retângulo é: " + area);
         System.out.println("O perímetro do retângulo é: " + per);
 
     }
-    public static void exer4(){
+
+    public static void exer4() {
         int idade, ano, mes, dias;
         Scanner ler = new Scanner(System.in);
 
@@ -74,7 +74,8 @@ public class atividade1 {
         System.out.println("Sua idade em dias é:" + idade);
 
     }
-    public static void exer5(){
+
+    public static void exer5() {
         int elei, nulos, bran, vali;
         double porN, porB, porV;
         Scanner ler = new Scanner(System.in);
@@ -89,9 +90,9 @@ public class atividade1 {
         vali = elei - (bran + nulos);
         System.out.println("O número total de votos válidos é: " + vali);
 
-        porN = (nulos * 100)/elei;
-        porB = (bran * 100)/elei;
-        porV = (vali * 100)/elei;
+        porN = (nulos * 100.0) / elei;
+        porB = (bran * 100.0) / elei;
+        porV = (vali * 100.0) / elei;
 
         System.out.println(porV + "% da população votou.");
         System.out.println(porN + "% dos votos foram nulos");
@@ -99,7 +100,7 @@ public class atividade1 {
 
     }
 
-    public static void exer6(){
+    public static void exer6() {
 
         double sal, per;
         Scanner ler = new Scanner(System.in);
@@ -108,14 +109,14 @@ public class atividade1 {
         System.out.println("Insira o percentual de reajuste:");
         per = ler.nextDouble();
 
-        per = (per * sal)/100;
+        per = (per * sal) / 100;
         sal = sal + per;
         System.out.println("Seu novo salário é: " + sal);
     }
 
-    public static void exer7 (){
+    public static void exer7() {
 
-        double fab,car;
+        double fab, car;
         double dist = 28;
         double imp = 45;
 
@@ -123,8 +124,8 @@ public class atividade1 {
 
         System.out.println("Insira o custo de fábrica do carro:");
         fab = ler.nextDouble();
-        dist = (dist * fab)/100;
-        imp = (imp * fab)/100;
+        dist = (dist * fab) / 100;
+        imp = (imp * fab) / 100;
         car = fab + imp + dist;
 
         System.out.println("Valor de fábrica: R$" + fab);
@@ -132,6 +133,7 @@ public class atividade1 {
         System.out.println("Valor de 45% de impostos: R$" + imp);
         System.out.println("O valor final do carro para o consumidor: R$" + car);
     }
+
     public static void exer8() {
         int numCar;
         double vendas, sal, valorCar, comiCar;
@@ -153,17 +155,18 @@ public class atividade1 {
 
         System.out.println("O salário final do vendedor é: R$" + sal);
     }
-    public static void exer9(){
+
+    public static void exer9() {
 
         double gF, gC;
         Scanner ler = new Scanner(System.in);
         System.out.println("Informe a temperatura em Fahrenheit:");
         gF = ler.nextDouble();
-        gC = 5 * (gF - 32)/9;
+        gC = 5 * (gF - 32) / 9;
         System.out.println("A temperatura em graus celcius é: " + gC + "º");
     }
 
-    public static void exer10(){
+    public static void exer10() {
 
         double n1, n2, n3, media;
         Scanner ler = new Scanner(System.in);
@@ -175,42 +178,38 @@ public class atividade1 {
         System.out.println("informe a terceira nota:");
         n3 = ler.nextDouble();
 
-        media = (n1 *2) + (n2 * 3) + (n3 * 5);
-        media = media/10;
+        media = (n1 * 2) + (n2 * 3) + (n3 * 5);
+        media = media / 10;
         System.out.println("A média final é: " + media);
     }
 
-    public static void exer11(){
+    public static void exer11() {
         Scanner ler = new Scanner(System.in);
         int num;
         System.out.println("Insira um número inteiro:");
         num = ler.nextInt();
-        if (num > 10){
+        if (num > 10) {
 
             System.out.println("É maior que 10!");
-        }
-        else if (num == 10){
+        } else if (num == 10) {
 
             System.out.println("É igual a 10!");
-        }
-        else {
+        } else {
 
             System.out.println("Não é maior que 10!");
         }
 
     }
 
-    public static void exer12(){
+    public static void exer12() {
         Scanner ler = new Scanner(System.in);
         int num;
         System.out.println("Insira um número:");
         num = ler.nextInt();
-        if (num >= 0){
+        if (num >= 0) {
 
             System.out.println("O número inserido é positivo");
-        }
-
-        else {
+        } else {
 
             System.out.println("O número inserido é negativo");
         }
@@ -218,7 +217,7 @@ public class atividade1 {
 
     }
 
-    public static void exer13(){
+    public static void exer13() {
 
         Scanner ler = new Scanner(System.in);
         int qtd;
@@ -226,19 +225,18 @@ public class atividade1 {
         System.out.println("Informe a quantidade de maçãs compradas: ");
         qtd = ler.nextInt();
 
-        if (qtd >= 12){
-            compra = qtd *1;
+        if (qtd >= 12) {
+            compra = qtd * 1;
             System.out.println("O valor total da compra foi: R$" + qtd);
 
-        }
-        else {
+        } else {
             compra = qtd * 1.3;
             System.out.println("O valor total da compra foi: R$" + compra);
         }
 
     }
 
-    public static void exer14(){
+    public static void exer14() {
 
         Scanner ler = new Scanner(System.in);
         int ano, nasci, voto;
@@ -249,36 +247,138 @@ public class atividade1 {
         nasci = ler.nextInt();
         voto = ano - nasci;
         System.out.println("Sua idade: " + voto);
-        if (voto >= 16){
+        if (voto >= 16) {
             System.out.println("Você poderá votar este ano!");
-        }
-        else {
+        } else {
             System.out.println("Você não poderá votar este ano!");
         }
     }
 
-    public static void exer15(){
+    public static void exer15() {
         Scanner ler = new Scanner(System.in);
         double var1, var2;
         System.out.println("Informe um número");
         var1 = ler.nextDouble();
         System.out.println("Informe um  segundo número");
         var2 = ler.nextDouble();
-        if (var1 > var2 ){
+        if (var1 > var2) {
             System.out.println("O número " + var1 + " é maior");
 
-        }
-        else if (var2 > var1){
+        } else if (var2 > var1) {
 
             System.out.println("O número " + var2 + " é maior");
-        }
-        else {
+        } else {
             System.out.println("Os números informados são iguais");
         }
 
     }
 
-    public static void exer16(){
+    public static void exer16() {
+
+        Scanner ler = new Scanner(System.in);
+        double var1, var2;
+        System.out.println("Informe um número");
+        var1 = ler.nextDouble();
+        System.out.println("Informe um  segundo número");
+        var2 = ler.nextDouble();
+        if (var1 > var2) {
+            System.out.println("A ordem crescente dos números é: " + var1 + " -> " + var2);
+
+        } else if (var2 > var1) {
+
+            System.out.println("A ordem crescente dos números é: " + var2 + " -> " + var1);
+        } else {
+            System.out.println("Os números informados são iguais");
+        }
+
+    }
+
+    public static void exer17() {
+
+        Scanner ler = new Scanner(System.in);
+        int inicio, fim, hora = 0;
+
+        System.out.println("Insira a hora (sem os minutos) do início da partida:");
+        inicio = ler.nextInt();
+        System.out.println("Insira a hora (sem os minutos) do final da partida:");
+        fim = ler.nextInt();
+        if (fim < inicio) {
+
+            hora = (24 - inicio) + fim;
+        } else if (fim > inicio) {
+
+                hora = fim - inicio;
+
+        } else if (fim == inicio) {
+
+            hora = 24;
+        }
+
+        System.out.println("O total de horas jogadas foram: " + hora);
+
+
+    }
+
+    public static void exer18() {
+
+        Scanner ler = new Scanner(System.in);
+        double hora, valor, extra, sal;
+        System.out.println("Informe quantas horas você trabalhou no mês:");
+        hora = ler.nextDouble();
+        System.out.println("Informe o valor das horas: ");
+        valor = ler.nextDouble();
+
+        hora = hora * valor;
+        sal = hora;
+
+        if(hora > 200.0){
+
+
+            extra = hora - 200;
+            valor = (valor * 50)/100;
+            extra = extra * valor;
+            sal = hora + extra;
+            System.out.println("O salário final é: R$" + sal);
+
+        } else if (hora == 200 || hora <200) {
+
+            System.out.println("O salário final é: R$" + sal);
+
+        }
+
+
+    }
+
+    public static void exer19(){
+
+        Scanner ler = new Scanner(System.in);
+        String nome;
+        double altura, peso;
+        String sexo;
+        
+
+        System.out.println("Informe seu nome: ");
+        nome = ler.next();
+        System.out.println("Informe sua altura: ");
+        altura = ler.nextDouble();
+        System.out.println(" informe seu sexo (m,f)");
+        sexo = ler.next();
+
+        if (sexo == "m"){
+
+            peso = (72.7 * altura) - 58;
+            System.out.println( nome + ", seu peso ideal é: " + peso);
+
+        }
+        else if (sexo == "f"){
+
+            peso = (62.1 * altura) - 44.7;
+            System.out.println( nome + ", seu peso ideal é: " + peso);
+        }
+    }
+
+    public static void exer20(){
+
 
     }
 }
