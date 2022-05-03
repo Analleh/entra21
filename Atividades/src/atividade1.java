@@ -111,7 +111,7 @@ public class atividade1 {
 
         per = (per * sal) / 100;
         sal = sal + per;
-        System.out.println("Seu novo salário é: " + sal);
+        System.out.printf("Seu novo salário é: R$%.2f",sal);
     }
 
     public static void exer7() {
@@ -128,10 +128,10 @@ public class atividade1 {
         imp = (imp * fab) / 100;
         car = fab + imp + dist;
 
-        System.out.println("Valor de fábrica: R$" + fab);
-        System.out.println("Valor de 28% do distribuidor: R$" + dist);
-        System.out.println("Valor de 45% de impostos: R$" + imp);
-        System.out.println("O valor final do carro para o consumidor: R$" + car);
+        System.out.printf("Valor de fábrica: R$%.2f" , fab);
+        System.out.printf("Valor de 28% do distribuidor: R$%.2f",dist);
+        System.out.printf("Valor de 45% de impostos: R$%.2f",imp);
+        System.out.printf("O valor final do carro para o consumidor: R$%.2f",car);
         /*
 
         */
@@ -156,7 +156,7 @@ public class atividade1 {
         sal = sal + vendas + comiCar;
 
 
-        System.out.println("O salário final do vendedor é: R$" + sal);
+        System.out.printf("O salário final do vendedor é: R$%.2f" , sal);
     }
 
     public static void exer9() {
