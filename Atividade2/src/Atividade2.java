@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Atividade2 {
 
     public static void main(String[] args) {
-        exer5();
+        exer6();
 
     }
     public static void exer1() {
@@ -119,7 +119,27 @@ public class Atividade2 {
         System.out.println("Informe a idade da terceira pessoa:");
         int id3 = ler.nextInt();
 
-        System.out.println(Math.max(id1, id2));
+        if ((id1 > id2)&&(id1 > id3)){
+            System.out.println("A primeira pessoa é a mais velha: " +id1+ " anos");
+        }
+        else if ((id2 > id1)&&(id2 > id3)){
+            System.out.println("A segunda pessoa é a mais velha: " +id2+ "anos");
+        }
+        else if ((id3 > id1)&&(id3> id2)){
+            System.out.println("A terceira pessoa é a mais velha: " +id3+ "anos");
+        }
+        else if ((id1 < id2)&&(id1 < id3)){
+            System.out.println("A primeira pessoa é a mais nova: " +id1+ "anos");
+        }
+        else if ((id2 < id1)&&(id2 < id3)) {
+            System.out.println("A segunda pessoa é a mais nova: " + id1 + "anos");
+        }
+        else  if ((id3 < id1)&&(id3 < id2)) {
+            System.out.println("A terceira pessoa é a mais nova: " + id1 + "anos");
+        }
+        else {
+            System.out.println("As idades são iguais:");
+        }
     }
 
 
