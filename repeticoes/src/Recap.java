@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -54,7 +56,7 @@ public class Recap {
                     break;
 
                 default:
-                    System.out.println("Não é Healer!!!");
+                    System.out.println("Não é uma classe válida!!!");
                     isHealer = false;
                     break;
             }
@@ -90,9 +92,43 @@ public class Recap {
         for (String word : splitted){
             System.out.println(word);
         }
-        System.out.println();
+        System.out.println(var3.substring(5,8));
 
     }
+    public static void recap (){
+
+        Scanner ler = new Scanner(System.in);
+        int[] numeros = {0,1,2,3,4,5,6,7,8,9}; //iciando uma lista com valores
+        int[] numeros2 = new int[10]; //iniciando lista vazia 
+        System.out.println(numeros[6]); // recuperando um valor da lista
+        numeros2[4] = ler.nextInt(); // inserindo um valor no array
+        System.out.println(numeros.length); // pegando a quantidade de itens
+        for (int i = 0; i < numeros.length; i++);{
+
+            int i;
+            System.out.println(numeros[i]);
+            
+        }
+        int[][]numeros3 = {{0,1,2,3,4},{5,6,7}};// iniciando uma matrizcom valores
+        int[][]numeros4 = new int[2][5]; // iniciando matriz sem valores
+        System.out.println(numeros3[0][2]); // recuperando um valor de uma matriz
+        numeros4[1] = new int[]{7,8,9,0}; //inserindo uma lista em uma linha da matriz
+        numeros4[0][0] = 9; // inserindo dados em uma posição de matriz
+
+        System.out.println(numeros3.length); // numero de linhas da matriz
+        System.out.println(numeros3[0].length); // quantifafr de itens na linhas de matrix
+        
+        for(int i = 0; i < numeros3.length; i++){
+            for(int j = 0; j < numeros3[i].length; j++){
+
+                System.out.println(numeros3[i][j]);
+                
+            }
+            
+        }
+    }
+   
+    
     }
 
 
