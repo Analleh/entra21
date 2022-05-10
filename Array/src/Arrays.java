@@ -1,14 +1,14 @@
 import java.util.Scanner;
 public class Arrays {
     public static void main(String[] args) {
-        exer5();
+        exer6();
 
     }
 
     public static void exer1() {
         Scanner ler = new Scanner(System.in);
 
-        System.out.println("insira uma frase:");
+        System.out.println("insira uma frase: ");
         String frase = ler.nextLine();
         int contador = 0;
 
@@ -89,7 +89,7 @@ public class Arrays {
         }
         else {
             for (int i = num; i > 0; i--) {
-                fator += i;
+                fator *= i;
             }
 
         }
@@ -116,11 +116,28 @@ public class Arrays {
             }
         }
     }
-    public static void exer5Correcao(){
+    public static void exer6(){
+        Scanner in = new Scanner(System.in);
 
+        System.out.println("Informe um número");
+        int num = in.nextInt();
+        int soma = 0;
+        
+
+        if (num == 0) {
+            soma = 0;
+        }
+        else {
+            for (int i = num; i > 0; i--) {
+                soma += i;
+            }
+        }
+        System.out.println("A soma de 1 até " + num + " é: " + soma);
     }
 
-    
+
+
+
     
     public static void batalhanaval(){
         Scanner ler = new Scanner(System.in);
