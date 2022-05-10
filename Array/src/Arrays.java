@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Arrays {
     public static void main(String[] args) {
-        exer3();
+        exer5();
 
     }
 
@@ -78,6 +78,49 @@ public class Arrays {
         }
         System.out.println("A soma dos números informados é: " +soma);
     }
+
+    public static void exer4() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Informe um número");
+        int num = in.nextInt();
+        int fator = 1;
+        if (num == 0) {
+            fator = 0;
+        }
+        else {
+            for (int i = num; i > 0; i--) {
+                fator += i;
+            }
+
+        }
+
+        System.out.println("O fatorial de " + num + " é " + fator);
+    }
+    public static void exer5(){
+
+        Scanner in = new Scanner(System.in);
+        for (int i = 3 ; i > 0 ; i --){
+
+            System.out.println("Informe a senha de acesso: ");
+            int senha = in.nextInt();
+            if(senha == 91352){
+                System.out.println("Senha correta! Acesso permitido");
+                break;
+            }
+            else{
+                System.out.println("Senha incorreta! ");
+                System.out.println("Você tem " + (i - 1) +" tentativas");
+                if (i == 1){
+                    System.out.println("Acesso bloqueado!!!");
+                }
+            }
+        }
+    }
+    public static void exer5Correcao(){
+
+    }
+
+    
     
     public static void batalhanaval(){
         Scanner ler = new Scanner(System.in);

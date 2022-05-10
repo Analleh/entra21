@@ -75,11 +75,20 @@ public class Recap {
         double var5 = 5.6; // variavel quebrada
 
         // Saídas - mensagenas ao usuário
-        System.out.println();
-        System.out.printf("%d, %.2f");
-        System.out.print("");
+        System.out.println(); // exibe mensagem e quebra de linha
+        System.out.printf("%d, %.2f, %s" , 10, 4.67888, "texto"); //exibe mensagem
+        System.out.print(""); // exibe mensagem sem quebra de linha
 
-        //String
+        //entrada - entrada do usuário
+        Scanner in = new Scanner(System.in);
+        in.nextLine(); // rotorna tudo o que tiver na linha
+        in.next(); //espera o usuário digitar e pega um único caracter
+        in.nextInt(); // pega valores inteiros
+        in.nextDouble(); // pega valores decimais
+
+        // switch
+
+        //String - lista de char
         var3 = "Did you know about the aclaimed MMO FFXIVV?";
         System.out.println(var3.length()); // length() retorna a quantidade total de caracteres no texto
         System.out.println(var3.charAt(0)); // charAt() retorna o caractere na posição x do testo;
@@ -94,20 +103,19 @@ public class Recap {
         }
         System.out.println(var3.substring(5,8));
 
-    }
-    public static void recap (){
 
         Scanner ler = new Scanner(System.in);
         int[] numeros = {0,1,2,3,4,5,6,7,8,9}; //iciando uma lista com valores
-        int[] numeros2 = new int[10]; //iniciando lista vazia 
+        int[] numeros2 = new int[10]; //iniciando lista vazia
+
+
         System.out.println(numeros[6]); // recuperando um valor da lista
         numeros2[4] = ler.nextInt(); // inserindo um valor no array
         System.out.println(numeros.length); // pegando a quantidade de itens
-        for (int i = 0; i < numeros.length; i++);{
+        for (int i = 0; i < numeros.length; i++){
 
-            int i;
             System.out.println(numeros[i]);
-            
+
         }
         int[][]numeros3 = {{0,1,2,3,4},{5,6,7}};// iniciando uma matrizcom valores
         int[][]numeros4 = new int[2][5]; // iniciando matriz sem valores
@@ -117,18 +125,15 @@ public class Recap {
 
         System.out.println(numeros3.length); // numero de linhas da matriz
         System.out.println(numeros3[0].length); // quantifafr de itens na linhas de matrix
-        
+
         for(int i = 0; i < numeros3.length; i++){
             for(int j = 0; j < numeros3[i].length; j++){
 
                 System.out.println(numeros3[i][j]);
-                
+
             }
-            
         }
     }
-   
-    
     }
 
 
