@@ -122,15 +122,8 @@ public class Arrays {
         System.out.println("Informe um número");
         int num = in.nextInt();
         int soma = 0;
-        
-
-        if (num == 0) {
-            soma = 0;
-        }
-        else {
-            for (int i = num; i > 0; i--) {
-                soma += i;
-            }
+        for (int i =1; i <= num ;i ++){
+            soma += i;
         }
         System.out.println("A soma de 1 até " + num + " é: " + soma);
     }
