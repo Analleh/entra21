@@ -94,7 +94,7 @@ public class Recap {
         System.out.println(var3.charAt(0)); // charAt() retorna o caractere na posição x do testo;
         System.out.println(var3.equals("Texte")); // equals() realiza comparação entre Strings
         System.out.println(var3.toLowerCase()); // toLowerCase() converte todos os caracteres da string para minúsculo
-        System.out.println(var3.toUpperCase()); // toUpperCase() converte todos os caracteres da strong para Maiúsculo
+        System.out.println(var3.toUpperCase()); // toUpperCase() converte todos os caracteres da string para Maiúsculo
         System.out.println(var3.contains("FFXIV")); // contains() checa se o texto informado contém a string do parâmetro
         System.out.println(var3.strip()); // strip() remove espaçoes do final e do começo do texto
         String [] splitted = var3.split(""); // split() irá quebrar o texto no delimitador informado e retornar uma lista

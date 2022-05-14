@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Arrays {
     public static void main(String[] args) {
-        exer6();
+        exer8();
 
     }
 
@@ -127,11 +127,64 @@ public class Arrays {
         }
         System.out.println("A soma de 1 até " + num + " é: " + soma);
     }
+    public static void exer7(){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Informe seu nome completo:");
+        String nome = in.nextLine();
+        for (int i = 0; i < nome.length(); i++) {
+
+            if (nome.charAt(i) == ' '){
+
+                System.out.println(nome.charAt(0) +". " + nome.charAt(i +1)+ ". ");
+            }
+        }
+
+    }
+    public static void exer07(){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Informe seu nome completo:");
+        String nome = in.nextLine();
+        String[] abreviação = nome.split("");
+        System.out.println(abreviação[0].charAt(0) + ". " +abreviação[1].charAt(0) + ".");
+    }
+
+    public static void exer8(){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Escreva uma palavra: ");
+        String palavra = in.nextLine();
+        StringBuilder invertida =  new StringBuilder(palavra);
+        String palavras = invertida.reverse().toString();
+
+        if(palavra.equals(palavras)){
+            System.out.println("A palavra " + palavra + " é um palíndromo");
+        }
+        else{
+            System.out.println("A palavra " + palavra + " não é um palíndromo");
+        }
+
+
+    }
+    public static void exer08(){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Escreva uma palavra: ");
+        String palavra = in.nextLine();
+        String reverse = "";
+        for (int i = palavra.length() - 1; i >= 0; i--){
+            reverse += palavra.charAt(i);
+        }
+        if (reverse.equals(palavra)) {
+            System.out.println("A palavra " + palavra + " é um palíndromo");
+        }
+        else{
+            System.out.println("A palavra " + palavra + " não é um palíndromo");
+        }
+
+    }
 
 
 
 
-    
+
     public static void batalhanaval(){
         Scanner ler = new Scanner(System.in);
 
