@@ -29,14 +29,14 @@ public class PPT {
             int vencedor = checarVencedor (escolhaUsuario , escolhaComputador);
              switch (vencedor){
                  case 0:
-                     System.out.println("esmpate");
+                     System.out.println("empate");
                      break;
                  case 1:
                      System.out.println("Usuário ganhou");
                      pontuaçãoJ1++;
                      break;
                  case 3:
-                     System.out.println("Compitador ganhoi");
+                     System.out.println("Computador ganhou");
                      pontuaçãoJ2++;
                      break;
              }
@@ -65,7 +65,7 @@ public class PPT {
 
         // 0 empate
         // 1 escolha1 vence
-        // 2 escolha 2 vence
+        // 2 escolha2 vence
 
         if (escolha1 == escolha2 ){
             return 0;
