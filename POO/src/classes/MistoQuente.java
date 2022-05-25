@@ -6,5 +6,6 @@ public class MistoQuente extends Lanche{
         this.adicionarIngrediente("Queijo");
         this.adicionarIngrediente("Presunto");
         this.adicionarIngrediente("Pão");
+        this.tipo = "Misto Quente";
     }
 }
