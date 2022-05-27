@@ -1,7 +1,10 @@
 import classes.*;
 import classes.XBurguer;
 
+import java.util.Locale;
 import java.util.Scanner;
+
+
 
 public class Main {
     public static void main(String[] args) {
@@ -15,6 +18,7 @@ public class Main {
         System.out.println("(4) - Hot Dog");
         System.out.println("(5) - Mini Pizza: Calabresa");
         int escolha = in.nextInt();
+        in.nextLine();
         Lanche lanche = null;
 
         switch (escolha) {
@@ -42,15 +46,31 @@ public class Main {
                 System.err.println("Escolha uma opção válida!");
         }
 
-        if (escolha == 1 || escolha == 2) {
-            System.out.print("Lanche aberto? (S/N)");
-            in.nextLine();
-            String aberto = in.nextLine();
-            ((XBurguer) lanche).aberto = aberto.equalsIgnoreCase("S");
+        if (lanche instanceof Sanduiche) {
+            //adicionais
+            System.out.println("Deseja adicionais? (S/N)");
+            String adiconais = in.nextLine();
+            if(adiconais.equalsIgnoreCase("S")){
+                // adicionar os adicionais
+                for (int i = 0; i < 10; i++){
+                    // pedir o add
+                    System.out.println("Informe o adicional: ");
+                    ((Sanduiche) lanche).adicionarAdicional(in.nextLine());
+                    System.out.println("Deseja adicionar mais adicionais? (S/N)");
+                    String parada = in.nextLine();
+                    if(parada.equalsIgnoreCase("N")){
+                        break;
+                    }
+                }
+            }
+            if (lanche instanceof XBurguer) {
+                System.out.print("Lanche aberto? (S/N)");
+                String aberto = in.nextLine();
+                ((XBurguer) lanche).aberto = aberto.equalsIgnoreCase("S");
+            }
         }
-        else if (escolha == 5) {
+        else {
             System.out.print("Borda Recheada? (S/N)");
-            in.nextLine();
             String borda = in.nextLine();
             MiniPizza minePizza = ((MiniPizza) lanche);
             minePizza.borda = borda.equalsIgnoreCase("S");
@@ -60,6 +80,8 @@ public class Main {
             }
 
         }
+
+
         System.out.print("Informe o valor do(a) "+lanche.tipo+ ": R$");
         lanche.valor = in.nextDouble();
         lanche.montarComanda();
@@ -67,3 +89,7 @@ public class Main {
     }
 
 }
+
+// construtor: variável do objeto -> public XBurguer. Java possui um construtor padrão quando o mesmo não é informado
+// classe abstrata não pode ser instanciada, define um comportamento genérico para as clases derivadas
+// classe derivada complementam o comportamento abstrado das classes, possuem um comportamento específico e podem ser instanciado
