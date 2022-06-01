@@ -1,22 +1,22 @@
-import classes.*;
-import classes.XBurguer;
+import classes.lanches.*;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 
 
 public class Main {
+    public static Scanner in = new Scanner(System.in);
     public static void main(String[] args) {
-
-
-        Scanner in = new Scanner(System.in);
+      montarLanche();
+    }
+    private static void montarLanche(){
         System.out.println("- MENU: Escolha uma opção - ");
         System.out.println("(1) - X-Salada");
         System.out.println("(2) - X-Burguer");
         System.out.println("(3) - Misto Quente");
         System.out.println("(4) - Hot Dog");
-        System.out.println("(5) - Mini Pizza: Calabresa");
+        System.out.println("(5) - Mini Pizza");
+        System.out.println("(6) - Pizza");
         int escolha = in.nextInt();
         in.nextLine();
         Lanche lanche = null;
@@ -41,9 +41,13 @@ public class Main {
             case 5:
                 lanche = new MiniPizza();
                 break;
+            case 6:
+                lanche = new Pizza();
+                break;
 
             default:
                 System.err.println("Escolha uma opção válida!");
+
         }
 
         if (lanche instanceof Sanduiche) {
@@ -66,26 +70,70 @@ public class Main {
             if (lanche instanceof XBurguer) {
                 System.out.print("Lanche aberto? (S/N)");
                 String aberto = in.nextLine();
-                ((XBurguer) lanche).aberto = aberto.equalsIgnoreCase("S");
+                ((XBurguer) lanche).setAberto(aberto.equalsIgnoreCase("S"));
             }
         }
         else {
-            System.out.print("Borda Recheada? (S/N)");
-            String borda = in.nextLine();
+            System.out.println("Escolha o sabor da pizza:");
+
+            System.out.println("(1) - 4 Queijos");
+            System.out.println("(2) - Calabresa");
+            System.out.println("(3) - Frango c/ catupiry");
+            System.out.println("(4) - Marguerida");
+            System.out.println("(5) - Portuguesa");
+
+            int sabor = in.nextInt();
+            in.nextLine();
             MiniPizza minePizza = ((MiniPizza) lanche);
-            minePizza.borda = borda.equalsIgnoreCase("S");
-            if(minePizza.borda) {
+            switch (sabor){
+                case 1:
+                    minePizza.adicionarSaborEIngredientes("4 queijos");
+                    break;
+                case 2:
+                    minePizza.adicionarSaborEIngredientes("calabresa");
+                    break;
+                case 3:
+                    minePizza.adicionarSaborEIngredientes("frango c/ catupiry");
+                    break;
+                case 4:
+                    minePizza.adicionarSaborEIngredientes("marguerita");
+                    break;
+                case 5:
+                    minePizza.adicionarSaborEIngredientes("portuguesa");
+                    break;
+                default:
+                    System.err.println("Escolha um valor válido");
+
+
+            }
+            if (lanche instanceof Pizza){
+                System.out.println("Informe o tamanho da pizza: ");
+                System.out.println("XS - Broto");
+                System.out.println("SM - Pequena");
+                System.out.println("MD - Média");
+                System.out.println("LG - Grande");
+                System.out.println("XL - Família");
+                ((Pizza)lanche).setTamanho(in.nextLine().toUpperCase());
+            }
+
+
+
+            System.out.print("Borda Recheada? (S/N)");
+            String bordaRecheada = in.nextLine();
+
+            minePizza.setBordaRecheada(bordaRecheada.equalsIgnoreCase("S"));
+            if(minePizza.isBordaRecheada()) {
                 System.out.println("Qual o sabor da borda?");
-                minePizza.sabor = in.nextLine();
+                minePizza.setSaborBorda(in.nextLine());
             }
 
         }
 
 
-        System.out.print("Informe o valor do(a) "+lanche.tipo+ ": R$");
-        lanche.valor = in.nextDouble();
+        System.out.print("Informe o valor do(a) "+lanche.getTipo()+ ": R$");
+        lanche.setValor(in.nextDouble());
+        System.out.println();
         lanche.montarComanda();
-
     }
 
 }

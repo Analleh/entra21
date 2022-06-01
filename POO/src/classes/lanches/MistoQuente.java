@@ -1,4 +1,4 @@
-package classes;
+package classes.lanches;
 
 public class MistoQuente extends Sanduiche{
 
@@ -6,6 +6,6 @@ public class MistoQuente extends Sanduiche{
         this.adicionarIngrediente("Queijo");
         this.adicionarIngrediente("Presunto");
         this.adicionarIngrediente("Pão");
-        this.tipo = "Misto Quente";
+        this.setTipo("Misto Quente");
     }
 }
