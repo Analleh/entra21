@@ -132,8 +132,7 @@ public class Main {
 
         System.out.print("Informe o valor do(a) "+lanche.getTipo()+ ": R$");
         lanche.setValor(in.nextDouble());
-        System.out.println();
-        lanche.montarComanda();
+
     }
 
 }
