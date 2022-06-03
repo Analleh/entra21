@@ -1,3 +1,4 @@
+import classes.cliente.Cliente;
 import classes.lanches.*;
 
 import java.util.Scanner;
@@ -7,9 +8,25 @@ import java.util.Scanner;
 public class Main {
     public static Scanner in = new Scanner(System.in);
     public static void main(String[] args) {
-      montarLanche();
+        Cliente cl = new Cliente();
+        System.out.println("Insira o nome do cliente: ");
+        cl.setNome(in.nextLine()); // passar como parâmetro o nextline, pois método não recebe atribuição
+
+        for (int i =0; i < 10; i++){
+            cl.getPedido().adicionarLanche(montarLanche());
+            if(i == 9){
+                break;
+            }
+            System.out.println("Deseja mais um lanche? (S/N)");
+            if(in.nextLine().equalsIgnoreCase("N")){
+                break;
+            }
+        }
+        System.out.println("......................................");
+        System.out.println("Cliente: "  + cl.getNome());
+        cl.getPedido().imprimirComanda();
     }
-    private static void montarLanche(){
+    private static Lanche montarLanche(){
         System.out.println("- MENU: Escolha uma opção - ");
         System.out.println("(1) - X-Salada");
         System.out.println("(2) - X-Burguer");
@@ -132,8 +149,11 @@ public class Main {
 
         System.out.print("Informe o valor do(a) "+lanche.getTipo()+ ": R$");
         lanche.setValor(in.nextDouble());
+        in.nextLine();
+        return lanche;
 
     }
+
 
 }
 

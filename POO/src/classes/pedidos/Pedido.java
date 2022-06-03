@@ -9,11 +9,12 @@ public class Pedido {
     public void imprimirComanda(){
 
 
-        for(Lanche l : this.getLanches()){
+        for(Lanche l : this.getLanches()){ // for it
             if(l != null){
 
                 if (l instanceof MiniPizza){
-                    MiniPizza mp = (MiniPizza)l;
+                    MiniPizza mp = (MiniPizza)l; // variavel para guardar a conversão em mini pizza
+                    System.out.println("......................................");
                     System.out.println("==="+mp.getTipo()+" - " +mp.getSabor() + "===");
                     if (mp.isBordaRecheada()){
                         System.out.println("-- COM BORDA RECHEADA: " +mp.getSaborBorda().toUpperCase()+ " --");
@@ -24,6 +25,7 @@ public class Pedido {
                     }
                 }
                 else{
+                    System.out.println("......................................");
                     System.out.println("==="+l.getTipo()+"===");
                 }
                 if (l instanceof XBurguer){
@@ -42,7 +44,7 @@ public class Pedido {
                     Sanduiche s = (Sanduiche)l;
                     if(s.getAdicionais()[0] != null){
                         System.out.println("-ADICIONAIS-");
-                        for (String adicional : s.getAdicionais()){
+                        for (String adicional : s.getAdicionais()){ // percorre a matriz  sem levar em consideração a posição
                             if(adicional != null){
                                 System.out.println(adicional);
                             }
@@ -51,6 +53,7 @@ public class Pedido {
                 }
             }
         }
+        System.out.println("---------------------------------");
         System.out.printf("Valor total do pedido: R$%.2f\n" , this.calcularValorTotal());
         System.out.println("---------------------------------");
     }
@@ -76,3 +79,12 @@ public class Pedido {
         return this.lanches;
     }
 }
+// Agregação - relacionamento tem um. e o objeto composto apenas usa ou tem conhecimento da existência do(s)
+//objeto(s) componente(s) os objetos componentes podem existir sem o agregado e vice-versa.
+
+// Composição - relacionamento é parte. Forma de associação em que o objeto composto é responsável pela existência dos componentes
+//O componente não tem sentido fora da composição.
+
+// Herança - é um
+
+// métodos ficam dentro da classe, não dentro de outros métodos
