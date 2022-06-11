@@ -2,11 +2,12 @@ package Classes.estante;
 
 import Classes.itens.Item;
 
+import java.util.Locale;
+
 public class Estante {
 
     private int capMaxima;
     private Item[] item;
-
 
     public Estante(int capMaxima){ //O construtor é responsável por criar o objeto
         setCapMaxima(capMaxima);
@@ -15,27 +16,42 @@ public class Estante {
     }
 
     public boolean estanteCheia(){
-        return quantidadeItens() == capMaxima;
+        return this.quantidadeItens() == this.getCapMaxima();
     }
 
     public int quantidadeItens(){
-        //TODO
-        return 0;
+        int contador = 0;
+        for (Item i : this.getItem()){
+            if (i != null){
+                contador++;
+            }
+        }
+        return contador;
     }
 
     public Item buscarItem(String titulo){
-        //TODO
+        for (Item i : this.getItem()){
+            if ( i != null && i.getTitulo().toLowerCase().contains(titulo.toLowerCase())){
+                return i;
+            }
+        }
         return null;
     }
 
     public boolean adicionarItem(Item item){
-        //TODO
+        for( int i = 0; i <this.getItem().length; i++){
+            if (this.getItem()[i] == null){
+                this.getItem()[i] = item;
+                return true;
+            }
+        }
         return false;
     }
 
     public Item removerItem(int posicao){
-        //TODO
-        return null;
+        Item i = this.getItem()[posicao];
+        this.getItem()[posicao] = null;
+        return i;
     }
 
     //getters e setter

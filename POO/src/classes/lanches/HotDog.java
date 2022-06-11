@@ -13,4 +13,9 @@ public class HotDog extends Sanduiche{
         this.adicionarIngrediente("Ervilha");
         this.setTipo("Hot Dog");
     }
+
+    @Override
+    public void mostrarDetalhesComanda() {
+
+    }
 }

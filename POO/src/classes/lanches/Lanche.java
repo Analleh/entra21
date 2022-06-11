@@ -14,6 +14,7 @@ public abstract class Lanche {
             }
         }
     }
+    public abstract void mostrarDetalhesComanda(); // Força todas as classes que "extends" de lanche a ter este método
 
     //getter e setter
     public void setTipo(String tipo){
