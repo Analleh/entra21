@@ -2,18 +2,21 @@ package Classes;
 
 public class Carro {
     private String modelo;
-    private double valorVenda;
+    private double valor;
 
-    public void setModelo(String modelo){
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
         this.modelo = modelo;
     }
-    public String getModelo(){
-        return this.modelo;
+
+    public double getValor() {
+        return valor;
     }
-    public void setValorVenda(double valorVenda){
-        this.valorVenda = valorVenda;
-    }
-    public double getValorVenda(){
-        return this.valorVenda;
+
+    public void setValor(double valor) {
+        this.valor = valor;
     }
 }
