@@ -3,6 +3,7 @@ import Classes.itens.DVD;
 import Classes.itens.Item;
 import Classes.itens.Livro;
 
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
@@ -170,6 +171,7 @@ public class Main {
             }
         }
     }
+
 
 }
 

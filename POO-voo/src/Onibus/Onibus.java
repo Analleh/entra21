@@ -7,6 +7,8 @@ import java.util.ArrayList;
 
 public class Onibus implements MeiodeTransporte {
     private ArrayList<AssentoOnibus> assentos = new ArrayList<>();
+
+
     private boolean leito;
 
     public Onibus(int linhasCadeiras){
