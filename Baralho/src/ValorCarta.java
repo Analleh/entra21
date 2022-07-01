@@ -14,7 +14,15 @@ public enum ValorCarta {
     K("13");
 
     public String valorCarta;
-    ValorCarta (String valor){
+    ValorCarta (String valor){ // pode colocar o private na frente mas não é necessário
         valorCarta = valor;
+    }
+
+    public String getValorCarta() {
+        return valorCarta;
+    }
+
+    public void setValorCarta(String valorCarta) {
+        this.valorCarta = valorCarta;
     }
 }

@@ -1,3 +1,4 @@
+import Classes.avaliacao.Avalicao;
 import Classes.estante.Estante;
 import Classes.itens.DVD;
 import Classes.itens.Item;
@@ -125,49 +126,48 @@ public class Main {
         }
 
     }
+    public static void mostarAvaliacoes(Item i) {
+        for (Avalicao a : i.getAvaliacoes()) {
+            if (a != null) {
+                System.out.println("Autor: "+a.getNome());
+                System.out.println("avaliação: "+a.getRating());
+                System.out.println("Comentário: ");
+                System.out.println(a.getFeedback());
+                System.out.println("--------------------");
+            }
+        }
+        System.out.println("Classificação final: "+i.getTotalRating());
+    }
 
     public static void removerItem() {
-        System.out.print("Qual o título da obra que deseja remover: ");
-        String titulo = in.nextLine();
-        for (int i = 0; i < e.getCapMaxima(); i++) {
-            if (e.getItem()[i] != null && e.getItem()[i].getTitulo().toLowerCase().contains(titulo.toLowerCase())) {
-                e.getItem()[i] = null;
-                System.out.println("Obra removida!");
-                break;
+        if (e.quantidadeItens() == 0) {
+            System.err.println("Não é possível remover itens de uma estante vazia!");
+        } else {
+            int posicao = -1;
+            while(posicao < 0 || posicao > e.getCapMaxima()) {
+                System.out.print("Informe a posição do item para remover: ");
+                posicao = in.nextInt();
+                if (posicao < 0 || posicao > e.getCapMaxima()) {
+                    System.err.println("Selecione uma opção válida!");
+                }
             }
-            if (i == 4) {
-                System.out.println("A obra não existe na estante!");
+            in.nextLine();
+            Item i = e.removerItem(posicao);
+            if (i != null) {
+                System.out.println("Item "+i.getTitulo()+" removido!");
             }
         }
     }
 
-    public static void mostrarItens() {
-        int contador = 1;
-        for (Item i : e.getItem()) {
-            if (i != null) {
-                System.out.println("------------------------");
-                System.out.println("Posição na estante: " + contador);
-                System.out.println("Título: " + i.getTitulo());
-                System.out.println("Gênero: " + i.getGenero());
-                System.out.println("Valor: R$" + i.getValor());
-                if (i instanceof DVD) {
-                    System.out.print("Ano de lançamento: ");
-                    System.out.println(((DVD) i).getAnoLancamento());
-                    System.out.print("Diretor: ");
-                    System.out.println(((DVD) i).getDiretor());
-                    System.out.print("Duração: ");
-                    System.out.println(((DVD) i).getDuracao());
-                } else if (i instanceof Livro) {
-                    System.out.print("Autor: ");
-                    System.out.println(((Livro) i).getAutor());
-                    System.out.print("Ano de publicação: ");
-                    System.out.println(((Livro) i).getAnoPublicacao());
-                    System.out.print("Quantidade de Páginas: ");
-                    System.out.println(((Livro) i).getQtdePaginas());
-                    System.out.print("Edição: ");
-                    System.out.println(((Livro) i).getEdicao());
+    public static void mostrarItens(Estante e) {
+        if (e.quantidadeItens() == 0) {
+            System.out.println("Estante vazia!");
+        } else {
+            for (int i = 0; i < e.getCapMaxima(); i++) {
+                Item item = e.getItens()[i];
+                if (item != null) {
+                    System.out.println("[" + i + "] " + item.getTitulo() + " (" + item.getGenero() + ")");
                 }
-                System.out.println("------------------------");
             }
         }
     }
