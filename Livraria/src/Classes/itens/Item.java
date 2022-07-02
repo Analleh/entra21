@@ -13,7 +13,7 @@ public abstract class  Item {
 
     private ArrayList<Avalicao> avaliacoes = new ArrayList<>();
 
-    public void avaliar(){
+    public void avaliar() {
         Scanner in = new Scanner(System.in);
         Avalicao a = new Avalicao();
         System.out.println("Informe o nome do avaliador:");
@@ -25,20 +25,26 @@ public abstract class  Item {
         a.setFeedback(in.nextLine());
         this.avaliacoes.add(a);
     }
-    public double getTotalRating(){
+
+    public double getTotalRating() {
 
 //        for (Avalicao a : getAvaliacoes()){
 //            soma += a.getRating();
 //        }
-        return this.avaliacoes.stream().mapToDouble(Avalicao::getRating).sum()/this.avaliacoes.size();
+        return this.avaliacoes.stream().mapToDouble(Avalicao::getRating).sum() / this.avaliacoes.size();
 
     }
+
+    public abstract void montarDetalhes(Scanner in);
+
+    public abstract void mostrarDetalhes();
 
     //getters e setters
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
+
     public String getTitulo() {
         return titulo;
     }
@@ -46,6 +52,7 @@ public abstract class  Item {
     public void setGenero(String genero) {
         this.genero = genero;
     }
+
     public String getGenero() {
         return genero;
     }
@@ -53,6 +60,7 @@ public abstract class  Item {
     public void setValor(double valor) {
         this.valor = valor;
     }
+
     public double getValor() {
         return valor;
     }
@@ -60,9 +68,9 @@ public abstract class  Item {
     public void setAvaliacoes(ArrayList<Avalicao> avaliacoes) {
         this.avaliacoes = avaliacoes;
     }
+
     public ArrayList<Avalicao> getAvaliacoes() {
         return avaliacoes;
     }
-
 
 }

@@ -1,6 +1,8 @@
 package Classes.itens;
 
 
+import java.util.Scanner;
+
 public class DVD extends Item {
     private String diretor;
     private double duracao;
@@ -27,5 +29,25 @@ public class DVD extends Item {
     }
     public int getAnoLancamento(){
         return anoLancamento;
+    }
+
+    @Override
+    public void montarDetalhes(Scanner in) {
+        System.out.println("Informe o diretor: ");
+        this.setDiretor(in.nextLine());
+        System.out.println("Informe o gênero: ");
+        this.setGenero(in.nextLine());
+        System.out.println("Informe o tempo de duração:");
+        this.setDuracao(in.nextDouble());
+        in.nextLine();
+    }
+
+    @Override
+    public void mostrarDetalhes() {
+        System.out.println("Ano de lançamento" + getAnoLancamento());
+        System.out.println("Diretor; "+ getDiretor());
+        System.out.println("Gênero: "+ getGenero());
+        System.out.println("Tempo de Duração: "+ getDuracao());
+
     }
 }

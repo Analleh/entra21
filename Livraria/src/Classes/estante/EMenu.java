@@ -5,8 +5,8 @@ public enum EMenu {
     ADICIONAR_ITEM(1, "Adicionar item a estante"),
     BUSCAR_ITEM(2, "Buscar item"),
     REMOVER_ITEM(3, "Remover item da estante"),
-    MOSTRAR_ITENS(4, "Mostar itens na estante"),
-    ORGANIZAR_ESTANTE(6, "Organizar estante");
+    MOSTRAR_ITENS(4, "Mostar itens na estante");
+    //ORGANIZAR_ESTANTE(6, "Organizar estante");
 
     private int valorOpcao;
     private String descricao;
@@ -30,5 +30,13 @@ public enum EMenu {
 
     public String getDescricao() {
         return this.descricao;
+    }
+
+    public void setValorOpcao(int valorOpcao) {
+        this.valorOpcao = valorOpcao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 }
