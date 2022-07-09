@@ -1,11 +1,14 @@
 package Classes.estante;
 
+import Classes.itens.Item;
+
 import java.util.Scanner;
 
-public enum EMenuItem {
+public enum EMenuItem implements IMenu {
     SAIR(0, "Voltar"),
     AVALIAR_ITEM(1, "Avaliar Item"),
-    VER_AVALIACOES(2, "Ver avaliações");
+    VER_AVALIACOES(2, "Ver avaliações"),
+    MOSTRAR_DETALHES(3, "Mostrar detalhes");
 
     private int valorOpcao;
     private String descricao;
@@ -19,7 +22,7 @@ public enum EMenuItem {
                 return e;
             }
         }
-        return null;
+        throw new RuntimeException();
     }
 
     public int getValorOpcao() {
