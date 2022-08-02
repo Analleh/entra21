@@ -51,3 +51,4 @@ public enum EMenu implements IMenu {
 // javaDoc - @Override , @Nullable , @NotNull , @Contract
 // para "excluir" uma annotation - @Deprecated
 // Generics - private T[ ] itens - vai receber o que for informado na tipagem (tipo generico) - public class Arraylist<T> extends
+// Deixar a estante genérica e depois defini-se o que será guardado - assim não é necessário criar mais de um array

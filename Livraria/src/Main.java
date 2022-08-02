@@ -78,62 +78,89 @@ public class Main {
     }
 
     public static void adicionarItem() {
-        if (loja.estanteCheia()) {
-            System.out.println("Sua estante está cheia! Não é possivel adicionar mais um item");
+        if (loja.getEstantes().isEmpty()) {
+            System.out.println("Sem estantes!");
         } else {
-            Item i = null;
-            int escolha = -1;
-            while (escolha < 0 || escolha > 1) {
-                System.out.println("Informe o item que deseja adicionar (0 - Livro / 1 - DVD");
-                escolha = in.nextInt();
-                if (escolha < 0 || escolha > 1) {
-                    System.err.println("selecione uma opção válida");
-                }
-            }
-            in.nextLine();
-            if (escolha == 0) {
-                i = new Livro();
+            Estante e = buscarEstante();
+            if (e.estanteCheia()) {
+                System.err.println("Sua estante está cheia! Não é possível adicionar mais itens!");
             } else {
-                i = new DVD();
-            }
-            System.out.println("Informe o título:");
-            i.setTitulo(in.nextLine());
-            System.out.println("Informe o gênero:");
-            i.setGenero(in.nextLine());
-            System.out.println("Informe o valor: R$");
-            i.setValor(in.nextDouble());
-            in.nextLine();
-            i.montarDetalhes(in);
-            if(!loja.adicionarItem(i)){
-                System.err.println("Não foi possível adicionar o item na estante!");
-            }
-            else{
-                System.out.println("Item adicionado com sucesso!");
+                Item i;
+                int escolha = -1;
+                while (escolha < 0 || escolha > 1) {
+                    System.out.print("Informe o item que deseja adicionar (0 - Livro / 1 - DVD): ");
+                    escolha = in.nextInt();
+                    if (escolha < 0 || escolha > 1) {
+                        System.err.println("Selecione uma opção válida");
+                    }
+                }
+                in.nextLine();
+                if (escolha == 0) {
+                    i = new Livro();
+                } else {
+                    i = new DVD();
+                }
+                System.out.print("Informe o título: ");
+                i.setTitulo(in.nextLine());
+                System.out.print("Informe o gênero: ");
+                i.setGenero(in.nextLine());
+                System.out.print("informe o valor: R$");
+                i.setValor(in.nextDouble());
+                in.nextLine();
+                i.montarDetalhes(in);
+                if (!e.adicionarItem(i)) {
+                    System.err.println("Não foi possível adicionar o item na estante!");
+                } else {
+                    System.out.println("Item adicionado com sucesso!");
+                }
             }
         }
     }
 
 
     public static void buscarItemETratarRetorno() {
-        System.out.print("Informe o título para busca: ");
-        Item i = e.buscarItem(in.nextLine());
-        if (i == null) {
-            System.err.println("O título buscado não existe na estante!");
+        if (loja.getEstantes().isEmpty()) {
+            System.out.println("Sem estantes!");
         } else {
-            EMenuItem escolha = (EMenuItem) escolherOpcao(i);
-            switch (escolha) {
-                case SAIR -> System.out.println("Retornando...");
-                case VER_AVALIACOES -> mostarAvaliacoes(i);
-                case AVALIAR_ITEM -> i.avaliar();
-                case MOSTRAR_DETALHES -> {
-                    System.out.println("Título: "+i.getTitulo());
-                    System.out.println("Gênero: "+i.getGenero());
-                    i.mostrarDetalhes();
-                    System.out.printf("Valor: R$%.2f\n", i.getValor());
+            System.out.print("Informe o título para busca: ");
+            String titulo = in.nextLine();
+            Item i = null;
+            for (Estante e : loja.getEstantes().values()) {
+                i = e.buscarItem(titulo);
+                if (i != null) {
+                    break;
                 }
-                default -> System.out.println("Opção não implementada");
+            }
+            if (i == null) {
+                System.err.println("O título buscado não existe na loja!");
+            } else {
+                EMenuItem escolha = (EMenuItem) escolherOpcao(i);
+                switch (escolha) {
+                    case VOLTAR -> System.out.println("Retornando...");
+                    case VER_AVALIACOES -> mostarAvaliacoes(i);
+                    case AVALIAR_ITEM -> i.avaliar();
+                    case MOSTRAR_DETALHES -> {
+                        System.out.println("Título: " + i.getTitulo());
+                        System.out.println("Gênero: " + i.getGenero());
+                        i.mostrarDetalhes();
+                        System.out.printf("Valor: R$%.2f\n", i.getValor());
+                    }
+                    default -> System.out.println("Não implementado!");
+                }
             }
         }
+    }
+
+    private static Estante buscarEstante() {
+        Estante e = null;
+        while(e == null) {
+            System.out.print("Informe o identificador da estante: ");
+            e = loja.getEstantes().get(in.nextLine().toLowerCase());
+            if (e == null) {
+                System.out.println("Estante não encontrada!");
+            }
+        }
+        return e;
     }
 
 
@@ -152,39 +179,49 @@ public class Main {
 
 
     public static void removerItem() {
-        if (e.quantidadeItens() == 0) {
-            System.err.println("Não é possível remover itens de uma estante vazia!");
+        if (loja.getEstantes().isEmpty()) {
+            System.out.println("Sem estantes!");
         } else {
-            int posicao = -1;
-            while(posicao < 0 || posicao > e.quantidadeItens()) {
-                System.out.print("Informe a posição do item para remover: ");
-                posicao = in.nextInt();
-                if (posicao < 0 || posicao > e.quantidadeItens()) {
-                    System.err.println("Selecione uma opção válida!");
+            Estante e = buscarEstante();
+            if (e.quantidadeItens() == 0) {
+                System.err.println("Não é possível remover itens de uma estante vazia!");
+            } else {
+                int posicao = -1;
+                while (posicao < 0 || posicao > e.quantidadeItens()) {
+                    System.out.print("Informe a posição do item para remover: ");
+                    posicao = in.nextInt();
+                    if (posicao < 0 || posicao > e.quantidadeItens()) {
+                        System.err.println("Selecione uma opção válida!");
+                    }
                 }
-            }
-            in.nextLine();
-            Item i = e.removerItem(posicao);
-            if (i != null) {
-                System.out.println("Item "+i.getTitulo()+" removido!");
+                in.nextLine();
+                Item i = e.removerItem(posicao);
+                System.out.println("Item " + i.getTitulo() + " removido!");
             }
         }
     }
 
     public static void mostrarItens() {
-        if (e.quantidadeItens() == 0) {
-            System.out.println("Estante vazia!");
-        } else {
-            for (int i = 0; i < e.quantidadeItens(); i++) {
-                Item item = e.getItem().get(i);
-                if (item != null) {
+        if (loja.getEstantes().isEmpty()) {
+            System.out.println("Sem estantes!");
+        }
+        for (String key: loja.getEstantes().keySet()) {
+            Estante e = loja.getEstantes().get(key);
+            System.out.println("Estante: '"+key+"'");
+            if (e.quantidadeItens() == 0) {
+                System.out.println();
+            } else {
+                for (int i = 0; i < e.quantidadeItens(); i++) {
+                    Item item = e.getItem().get(i);
                     System.out.println("[" + i + "] " + item.getTitulo() + " (" + item.getGenero() + ")");
                 }
             }
         }
     }
-
-
 }
+
+
+
 // coesão : ele faz o que tem que fazer. Cada método executa aquilo que deve executar
+// lambda - [0 1 2 3 4]. removeIf(hum -> hum %2 != 0; -> (chave, valor) -> {____________ return}
 

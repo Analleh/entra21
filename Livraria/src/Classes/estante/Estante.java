@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Map;
 
 public class Estante {
 
@@ -72,6 +73,7 @@ public class Estante {
     public int getCapMaxima() {
         return capMaxima;
     }
+
 
 
 }
