@@ -6,13 +6,14 @@
     <meta name="description" content="tabelas">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Ana Letícia ">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div id="tabelas">
-        <table border="2">
-            <caption>Monthly savings</caption>
+        <table>
+            <caption><h3>Monthly savings</h3></caption>
             <thead>
                 <tr> <!--uma linha-->
                     <th>Month</th> <!--Define o cabeçalho (table head)-->
@@ -39,5 +40,36 @@
             </tfoot>
         </table>
       </div>
+      <p>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+      <div id="tabelas">
+        <table border="1">
+            <caption><h3>Monthly savings</h3></caption>
+            <thead>
+                <tr> <!--uma linha-->
+                    <th>Month</th> <!--Define o cabeçalho (table head)-->
+                    <th>Savings</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> <!-- elemento de coluna (table data)-->
+                        January
+                    </td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>$80</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td><small>Sum: $180</small></td>
+                </tr>
+            </tfoot>
+        </table>
+      </div>
+
 </body>
 </html>
