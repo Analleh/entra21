@@ -12,64 +12,32 @@
 </head>
 <body>
     <div id="tabelas">
-        <table>
+        <table class ="contained">
             <caption><h3>Monthly savings</h3></caption>
             <thead>
                 <tr> <!--uma linha-->
-                    <th>Month</th> <!--Define o cabeçalho (table head)-->
-                    <th>Savings</th>
+                    <th class="w-50">Month</th> <!--Define o cabeçalho (table head)-->
+                    <th colspan="2">Savings</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td> <!-- elemento de coluna (table data)-->
-                        January
-                    </td>
-                    <td>$100</td>
+                    <td class="w-50"> January</td><!-- elemento de coluna (table data)-->
+                    <td class="w-40" >$100</td>
+                    <td class="edit-cell"><a href="#">View</a></td>
                 </tr>
                 <tr>
-                    <td>February</td>
-                    <td>$80</td>
+                    <td class="w-50">February</td>
+                    <td class="w-40">$80</td>
+                    <td class="edit-cell"><a href="#">View</a></td>
                 </tr>
             </tbody>
             <tfoot>
-                <tr>
-                    <td></td>
-                    <td><small>Sum: $180</small></td>
+                <tr class="sum">
+                    <td colspan="3"><small>Sum: $180</small></td>
                 </tr>
             </tfoot>
         </table>
       </div>
-      <p>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
-      <div id="tabelas">
-        <table border="1">
-            <caption><h3>Monthly savings</h3></caption>
-            <thead>
-                <tr> <!--uma linha-->
-                    <th>Month</th> <!--Define o cabeçalho (table head)-->
-                    <th>Savings</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td> <!-- elemento de coluna (table data)-->
-                        January
-                    </td>
-                    <td>$100</td>
-                </tr>
-                <tr>
-                    <td>February</td>
-                    <td>$80</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td></td>
-                    <td><small>Sum: $180</small></td>
-                </tr>
-            </tfoot>
-        </table>
-      </div>
-
 </body>
 </html>

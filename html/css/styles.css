@@ -12,10 +12,20 @@ body{
 .white-txt{
     color: blue!important;
 } */
+
+table.contained{
+    margin: 0 15%;
+    width: 70%;
+}
 table{
-    border: 1px solid black;
+
+    /*border: 1px solid black;*/
+    /*border: 1px solid #b3b3b3;*/
     width: 100%;
     border-spacing: 0;
+    border-collapse: collapse;
+    
+
 }
 
 th{
@@ -23,6 +33,68 @@ th{
     background-color: #a0cad8;
     padding: 8px 4px;
     
+}
+tr{
+    border-bottom: 1px solid #b3b3b3 ;
+}
+.w-50{
+    width: 50%;
+}
+
+.w-40{
+    width: 40%;
+}
+
+.edit-cell{
+    text-align: center;
+}
+.edit-cell a{
+    text-decoration: none;
+    background-color: #85b0bd;
+    padding: 4px 8px;
+    margin: 2px 0;
+    display: inline-block;
+    color: white;
+    border-radius: 4px;
+    
+}
+
+.edit-cell a:hover{
+    background-color: #65909c;
+}
+
+ul.navlist li a{
+    text-decoration: none;
+    background-color: #85b0bd;
+    padding: 4px 8px;
+    margin: 2px 0;
+    display: inline-block;
+    color: white;
+    border-radius: 4px;
+}
+ul.navlist li a:hover{
+    background-color: #65909c;
+}
+
+ul.navlist{
+    text-align: center;
+    list-style: none;
+}
+
+ul.navlist li {
+    display: inline;
+}
+
+tfoot tr{
+    border-bottom: 0;
+}
+tfoot tr.sum td {
+    text-align: right;
+}
+
+small{
+    color: #85b0bd;
+    font-size: 12px;
 }
 *{ 
     font-family: 'Poppins'; 
