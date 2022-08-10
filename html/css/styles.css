@@ -1,5 +1,15 @@
 html, body{
+    margin: 0;
     background-color: #f1f1f1;
+}
+
+body {
+    height: 100%;
+}
+
+.colorforms{
+    background-color: #b6d3a8;
+    
 }
 table.contained{
     margin: 0 15%;
@@ -120,6 +130,34 @@ div.titulo {
     margin-left: auto;
     margin-right: auto;
    
+}
+
+div#forms .header{
+    margin-bottom: 24px;
+    font-size: 3em;
+}
+div.forms{
+    background-color: #f1f1f1;
+    box: #f1f1f1;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 32px;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.formstitulo {
+    background-color: #f1f1f1;
+    border-radius: 12px;
+    border-top: 12px solid #45593b;
+    padding: 24px;
+    margin-bottom: 32px;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+.colorforms form {
+    padding-top: 32px;
 }
     
     
