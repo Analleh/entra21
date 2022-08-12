@@ -14,3 +14,9 @@ div.footer{
 .textcenter{
     text-align: center;
 }
+a.mystyle{
+    font-size: 20px;
+}
+div.footer div div.section{
+    border-left: 1px solid;
+}

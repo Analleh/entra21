@@ -7,6 +7,7 @@
     <title>Primeira página - bootstrap </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     
 </head>
@@ -14,7 +15,7 @@
     <nav class="navbar bg-teal navbar-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="img/butterfly.png" alt="" width="30" height="24">
+            <img src="img/butterfly.png" alt="Icons made by <a href='https://www.freepik.com' title='Freepik'> Freepik </a> from <a href='https://www.flaticon.com/' title='Flaticon'>www.flaticon.com'</a>" width="30" height="24">
             Primeira página
           </a>
           <div>
@@ -22,15 +23,58 @@
           </div>
         </div>
       </nav>
-      <div class="footer mt-auto hstack gap-3">
-        <div class="me-auto">
-            Icons made by <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a>
+
+      <div class="card" style="width: 18rem;">
+        <!--<img src="..." class="card-img-top" alt="..."> -->
+        <div class="card-body">
+          <form>
+            <div class="mb-3">
+              <label>Login</label>
+              <input type="email" class="form-control" id="" aria-describedby="emailHelp" placeholder="Insira seu email">
+            </div>
+            <div class="mb-3">
+              <label>Senha</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Insira sua senha">
+            </div>
+            <button type="submit" class="btn btn-primary">Entrar</button>
+          </form>
         </div>
-        <div class="vr"></div>
+      </div>
+
+
+      <div class="footer mt-auto hstack gap-3 text-white align-items-stretch">
+        <div class="d-flex flex-row align-items-stretch flex-grow-1">
+
+          <div class="flex-grow-1 d-flex flex-column">
+            <h5>Dúvidas</h5>
+            <hr class="me-2">
+            <a href="" class="text-decoration-none link-light">Teste</a>
+            <a href="" class="text-decoration-none link-light">Teste</a>
+            <a href="" class="text-decoration-none link-light">Teste</a>
+          </div>
+         
+            <div class="flex-grow-1 d-flex flex-column">
+              <h5>Contato</h5>
+              <hr class ="me-2">
+              <a href="" class="text-decoration-none link-light">Teste</a>
+              <a href="" class="text-decoration-none link-light">Teste</a>
+            </div>
+         
+          <div class="flex-grow-1 d-flex flex-column">
+            <h5>Sugestões</h5>
+            <hr class ="me-2">
+            <a href="" class="text-decoration-none link-light">Teste</a>
+            <a href="" class="text-decoration-none link-light">Teste</a>
+            <a href="" class="text-decoration-none link-light">Teste</a>
+            <a href="" class="text-decoration-none link-light">Teste</a>
+          </div>
+      </div>
+      
+        <div class="vr mx-2"></div>
         <div class="d-flex flex-column gap-3 p-3">
-            <a href="#" class="text-decoration-none link-light">LinkedIn</a>
-            <a href="#" class="text-decoration-none link-light">Facebook</a>
-            <a href="#" class="text-decoration-none link-light">Instagram</a>
+            <a href="#" class="text-decoration-none link-light mystyle"><i class="bi bi-linkedin" style="color:white"></i> LinkedIn</a>
+            <a href="#" class="text-decoration-none link-light mystyle"><i class="bi bi-facebook" style="color:white"></i> Facebook</a>
+            <a href="#" class="text-decoration-none link-light mystyle"><i class="bi bi-instagram" style="color:white"></i> Instagram</a>
         </div>
       </div>
       
