@@ -46,6 +46,9 @@ tr{
 .edit-cell{
     text-align: center;
 }
+.edit-cell button{
+    display: inline-block;
+}
 .edit-cell a{
     text-decoration: none;
     background-color: #85b0bd;
@@ -158,6 +161,40 @@ div.formstitulo {
 
 .colorforms form {
     padding-top: 32px;
+}
+.btn{
+    border: 0;
+    background-color: transparent;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.btn.btn-success{
+   background-color: #a0cad8;
+}
+.btn.btn-success:hover{
+    background-color: #6eb7cf;
+}
+.btn.btn-success:active {
+    background-color: #65909c;
+}
+.btn.btn-warning{
+    background-color: #65669c;
+}
+.btn.btn-warning:hover{
+    background-color: #797abd;
+}
+.btn.btn-warning :active{
+    background-color: #4c4d75;
+}
+.btn.btn-danger{
+    background-color: #6e3274;
+}
+.btn.btn-danger:hover{
+    background-color: #9c47a3;
+}
+.btn.btn-dange:active{
+    background-color: #3c1b3f;
 }
     
     
