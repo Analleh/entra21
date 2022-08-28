@@ -1,0 +1,23 @@
+html, body{
+    margin: 0;
+    background-color: #f1f1f1;
+    height: 100%;
+    display: block;
+    text-align: center;
+}
+*{ 
+    font-family: 'Poppins'; 
+}
+
+.btnCat{
+    border: 0;
+    background-color: #4c4d75;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 15px;
+    display: block;
+    color: #f1f1f1;
+    margin-left: auto;
+    margin-right: auto;
+}

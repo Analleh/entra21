@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link rel="stylesheet" href="css/styles.css"> 
+    <link rel="stylesheet" href="css/stylesVAM.css"> 
     <script type="text/javascript">
 
         let v = ["Venezuela","Vaticano"];
@@ -16,19 +16,38 @@
         let a = ["Alemanha"];
         let posicoes = ['v', 'o', 'l','t', 'a'];
         let acertos = 0;
+        let erros = 0;
 
         function load(){
             let msg = document.getElementById("answer").value;
             document.getElementById("answer").value = "";
             console.log(msg);
-            if(msg.charAt(0).toLowerCase() == posicoes[acertos]){
-                alert("deu certo");
+            if(msg == ""){
+                let avisoBody = document.getElementById("aviso");
+                avisoBody.innerHTML = `Digite algum lugar`;
+                
+            }
+            else if(msg.charAt(0).toLowerCase() == posicoes[acertos]){
+                let avisoBody = document.getElementById("aviso");
+                avisoBody.innerHTML = `Você pode viajar para ${msg}!`;
 
                 if(!getLista().includes(msg)){
                     getLista().push(msg);
                     console.log(getLista());
                 }
                 acertos++;
+
+            }else{
+                let avisoBody = document.getElementById("aviso");
+                avisoBody.innerHTML = `Você não pode viajar para ${msg}!`;
+                
+                erros++;
+
+                if(erros == 3){
+                    let avisoBody = document.getElementById("aviso");
+                    avisoBody.innerHTML = "Dica: Você pode ir para "  + getLista()[0];
+                    erros = 0;
+                }
             }
 
             if(acertos == 5){
@@ -64,10 +83,13 @@
     <div class="body">
         <h2>Jogo volta ao mundo</h2>
         <h4>Para onde você vai?</h4>
-        <label for="answer">Digite aqui!</label>
-        <input id="answer" type="text" name="answer">
-        <button class="btnCat" onclick="load()">Posso viajar</button>
+        <input id="answer" type="text" name="resposta" placeholder="Digite aqui...">
+        <div id="aviso">
+            
 
+        </div>
+        <button class="btnCat" onclick="load()">Posso viajar?</button>
     </div>
+    
 </body>
 </html>
