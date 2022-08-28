@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="css/styles.css"> 
+    <script type="text/javascript">
+
+        let v = ["Venezuela","Vaticano"];
+        let o = ["Omã"];
+        let l = ["Londres"];
+        let t = ["Turquia"];
+        let a = ["Alemanha"];
+        let posicoes = ['v', 'o', 'l','t', 'a'];
+        let acertos = 0;
+
+        function load(){
+            let msg = document.getElementById("answer").value;
+            document.getElementById("answer").value = "";
+            console.log(msg);
+            if(msg.charAt(0).toLowerCase() == posicoes[acertos]){
+                alert("deu certo");
+
+                if(!getLista().includes(msg)){
+                    getLista().push(msg);
+                    console.log(getLista());
+                }
+                acertos++;
+            }
+
+            if(acertos == 5){
+                acertos = 0;
+            }
+        }
+
+        function getLista(){
+            switch(acertos){
+                case 0:
+                    return v;
+                    
+                case 1:
+                    return o;
+                    
+                case 2:
+                    return l;
+                    
+                case 3:
+                    return t;
+                    
+                case 4:
+                    return a;
+                    
+            }
+        }
+            
+        
+        
+    </script>
+</head>
+<body>
+    <div class="body">
+        <h2>Jogo volta ao mundo</h2>
+        <h4>Para onde você vai?</h4>
+        <label for="answer">Digite aqui!</label>
+        <input id="answer" type="text" name="answer">
+        <button class="btnCat" onclick="load()">Posso viajar</button>
+
+    </div>
+</body>
+</html>

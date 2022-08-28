@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!--HTML inicial -->   
+<head>
+    <title>Primeira página html</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Primeira página">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Ana Letícia ">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="css/styles.css"> 
+    <script type="text/javascript">
+        function load(){
+            let guess = Math.floor(Math.random() * 11);
+            console.log(guess);
+            let userInput = -1;
+            while(guess != userInput){
+                userInput= prompt("Take a whild guess:");
+            }
+        }
+        // var count = 0;
+        // function onClick(){
+        //     count++;
+        //     console.log(count);
+        // }
+        // function load(){
+        //     alert("Hello!");
+        // }
+        window.onload = load;
+      </script>
+</head>
+<body>
+    <h2 class="edit-cell"><img src="https://www.pngarts.com/files/8/Horizontal-Line-Transparent-Background-PNG.png" width="100px">Página inicial<img src="https://www.pngarts.com/files/8/Horizontal-Line-Transparent-Background-PNG.png" width="100px">
+        <aside></h2>
+        <ul class="navlist">
+            <li>
+                <a href="h.html">Títulos</a>
+            </li>
+            <li>
+                <a href="p.html">Parágrafos</a>
+            </li>
+            <li>
+                <a href="img.html">Imagens</a>
+            </li>
+            <li>
+                <a href="a.html">Links</a>
+            </li>
+            <li>
+                <a href="listas.html">Listas</a>
+            </li>
+            <li>
+                <a href="tabelas.html">Tabelas</a>
+            </li>
+            <li>
+                <a href="forms.html">Formulários</a>
+            </li>
+            <li>
+                <a href="iframe.html">Vídeos</a>
+            </li>
+            <li>
+                <a href="javascript.html">JavaScript</a>
+            </li>
+            <li>
+                <a href="api.html">API</a>
+            </li>
+            <li>
+                <a href="voltaAoMundo.html">Jogo Volta Ao Mundo</a>
+            </li>
+        </ul>  
+    </aside> 
+    <button onclick="onClick()">Contar</button>
+</body>
+</html>

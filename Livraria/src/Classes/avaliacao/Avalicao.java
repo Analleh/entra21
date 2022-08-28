@@ -1,6 +1,10 @@
 package Classes.avaliacao;
 
+import java.time.LocalDateTime;
+
 public class Avalicao {
+
+    LocalDateTime dataAvaliação = LocalDateTime .now();
 
     private double rating;
     private String nome;
@@ -29,5 +33,11 @@ public class Avalicao {
         return feedback;
     }
 
+    public LocalDateTime getDataAvaliação() {
+        return dataAvaliação;
+    }
 
+    public void setDataAvaliação(LocalDateTime dataAvaliação) {
+        this.dataAvaliação = dataAvaliação;
+    }
 }

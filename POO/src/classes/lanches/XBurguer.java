@@ -1,5 +1,7 @@
 package classes.lanches;
 
+import java.util.Scanner;
+
 public class XBurguer extends Sanduiche{
 
     private boolean aberto;
@@ -26,6 +28,17 @@ public class XBurguer extends Sanduiche{
 
     @Override
     public void mostrarDetalhesComanda() {
+        super.mostrarDetalhesComanda();
+        if (this.isAberto()) {
+            System.out.println("-- LANCHE ABERTO --");
+        }
+    }
 
+    @Override
+    public void montarDetalhesLanche(Scanner in) {
+        super.montarDetalhesLanche(in);
+        System.out.println("Lanche aberto? (S/N)");
+        String aberto = in.nextLine();
+        this.setAberto(aberto.equalsIgnoreCase("S"));
     }
 }

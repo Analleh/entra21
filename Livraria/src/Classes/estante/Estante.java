@@ -2,17 +2,25 @@ package Classes.estante;
 
 import Classes.itens.Item;
 
-import java.util.Locale;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.Map;
 
 public class Estante {
 
+//    LocalDate date = null;
+//    LocalTime time = null;
+//    LocalDateTime dateTime= null;
+
     private int capMaxima;
-    private Item[] item;
+    private ArrayList<Item> item = new ArrayList<>();
 
     public Estante(int capMaxima){ //O construtor é responsável por criar o objeto
         setCapMaxima(capMaxima);
-        setItem(new Item[capMaxima]);
-        //TODO
+
+
     }
 
     public boolean estanteCheia(){
@@ -20,47 +28,43 @@ public class Estante {
     }
 
     public int quantidadeItens(){
-        int contador = 0;
-        for (Item i : this.getItem()){
-            if (i != null){
-                contador++;
-            }
-        }
-        return contador;
+        return this.item.size();
     }
 
     public Item buscarItem(String titulo){
         for (Item i : this.getItem()){
-            if ( i != null && i.getTitulo().toLowerCase().contains(titulo.toLowerCase())){
+            if ( i .getTitulo().toLowerCase().contains(titulo.toLowerCase())){
                 return i;
             }
         }
         return null;
+
+        //return this.item.stream().filter(i -> i.getTitulo().equalsIgnoreCase(titulo)).findFirst().orElse(null);  - lambda
     }
 
     public boolean adicionarItem(Item item){
-        for( int i = 0; i <this.getItem().length; i++){
-            if (this.getItem()[i] == null){
-                this.getItem()[i] = item;
-                return true;
-            }
+
+        if (!estanteCheia()){
+            this.item.add(item);
+            return true;
         }
+
         return false;
     }
 
     public Item removerItem(int posicao){
-        Item i = this.getItem()[posicao];
-        this.getItem()[posicao] = null;
-        return i;
+        return  this.item.remove(posicao);
     }
 
     //getters e setter
 
-    public void setItem(Item[] item) {
-        this.item = item;
-    }
-    public Item[] getItem() {
+
+    public ArrayList<Item> getItem() {
         return item;
+    }
+
+    public void setItem(ArrayList<Item> item) {
+        this.item = item;
     }
 
     public void setCapMaxima(int capMaxima) {
@@ -69,6 +73,7 @@ public class Estante {
     public int getCapMaxima() {
         return capMaxima;
     }
+
 
 
 }
