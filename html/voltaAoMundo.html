@@ -49,12 +49,10 @@
                     erros = 0;
                 }
             }
-
             if(acertos == 5){
                 acertos = 0;
             }
         }
-
         function getLista(){
             switch(acertos){
                 case 0:
@@ -73,23 +71,18 @@
                     return a;
                     
             }
-        }
-            
-        
-        
+        }    
     </script>
+
 </head>
 <body>
     <div class="body">
-        <h2>Jogo volta ao mundo</h2>
-        <h4>Para onde você vai?</h4>
+        <img  class = "img"src="img/Vam.png">
+        <h1>Jogo volta ao mundo</h1>
+        <h3>Para onde você vai?</h3>
         <input id="answer" type="text" name="resposta" placeholder="Digite aqui...">
-        <div id="aviso">
-            
-
-        </div>
-        <button class="btnCat" onclick="load()">Posso viajar?</button>
+        <div id="aviso" class="aviso"></div>
+        <button class="btnVam" onclick="load()">Posso viajar?</button>
     </div>
-    
 </body>
 </html>

@@ -1,0 +1,44 @@
+html, body{
+    margin: 0;
+    background-color: #c2c3e9;
+    height: 100%;
+    display: block;
+    text-align: center;
+}
+#catBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#imgStyle{
+    border:4px;
+    border-radius: 8px;
+    border:solid ;
+    border-color: #3c1b3f;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    display: block;
+}
+
+.btnCat{
+    border: 0;
+    background-color: #4c4d75;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+}
+#gatinhos{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}

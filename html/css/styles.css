@@ -194,40 +194,7 @@ div.formstitulo {
     background-color: #3c1b3f;
 }
 
-#catBody{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
 
-.catBody-colors{
-    background-color: #c2c3e9;
-    height: auto;
-}
-#imgStyle{
-    border:4px;
-    border-radius: 8px;
-    border:solid ;
-    border-color: #3c1b3f;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
-    display: block;
-}
-
-.btnCat{
-    border: 0;
-    background-color: #4c4d75;
-    padding: 4px 8px;
-    cursor: pointer;
-    border-radius: 8px;
-    margin-top: 15px;
-    display: block;
-}
     
     
     

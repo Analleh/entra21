@@ -9,7 +9,7 @@ html, body{
     font-family: 'Poppins'; 
 }
 
-.btnCat{
+.btnVam{
     border: 0;
     background-color: #4c4d75;
     padding: 4px 8px;
@@ -20,4 +20,11 @@ html, body{
     color: #f1f1f1;
     margin-left: auto;
     margin-right: auto;
+}
+.img{
+    margin-top: 50px;
+    width: 20%;
+}
+.aviso{
+    margin-top: 15Spx;
 }

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2b349c69-0c91-49f0-b325-889ca5fc5f7b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../CondingBat/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ExerData/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Livraria/Livraria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Livraria/Livraria.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Livraria/src/Classes/estante/EMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Livraria/src/Classes/estante/EMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Livraria/src/Classes/estante/EMenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Livraria/src/Classes/estante/EMenuItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Livraria/src/Classes/estante/Estante.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Livraria/src/Classes/estante/Estante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Livraria/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Livraria/src/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="28fkZcQ3FCnkAap8znbRFz0JxJQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/alrpereira/Documents/Git/entra21/repeticoes"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.Morse">
+    <configuration name="Arrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Arrays" />
+      <module name="repeticoes" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Morse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Morse" />
+      <module name="repeticoes" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Recap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Recap" />
+      <module name="repeticoes" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Repeticoes2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Repeticoes2" />
+      <module name="repeticoes" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Repeticões3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Repeticões3" />
+      <module name="repeticoes" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Morse" />
+        <item itemvalue="Application.Recap" />
+        <item itemvalue="Application.Arrays" />
+        <item itemvalue="Application.Repeticões3" />
+        <item itemvalue="Application.Repeticoes2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2b349c69-0c91-49f0-b325-889ca5fc5f7b" name="Changes" comment="" />
+      <created>1651615130988</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651615130988</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
