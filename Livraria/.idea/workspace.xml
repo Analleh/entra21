@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3d801fd-522c-4dc2-a793-eac13b9a88c5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Array/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Atividade2/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Atividades/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Avancado/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Baralho/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CondingBat/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ExerData/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JogoForca/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO-voo/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../POO2/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PedraPapelTesoura/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../aulaDia1605/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../aulaDia1705/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jogoVelha/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../repeticoes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../html/api.html" beforeDir="false" afterPath="$PROJECT_DIR$/../html/api.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../html/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../html/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../html/css/stylesVAM.css" beforeDir="false" afterPath="$PROJECT_DIR$/../html/css/stylesVAM.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../html/voltaAoMundo.html" beforeDir="false" afterPath="$PROJECT_DIR$/../html/voltaAoMundo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +39,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/alrpereira/Documents/Git/entra21/Spring/primeiro-projeto-spring",
+    "last_opened_file_path": "C:/Users/alrpereira/Documents/Git/entra21/Livraria",
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
