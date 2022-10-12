@@ -4,6 +4,8 @@ import lombok.Data;
 
 @Data
 public class ItemListagemDTO {
-    private String titulo;
-
+    public Long id;
+    public String titulo;
+    public Boolean emprestado;
+    public String tipo;
 }

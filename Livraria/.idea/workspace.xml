@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3d801fd-522c-4dc2-a793-eac13b9a88c5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring/primeiro-projeto-spring/src/main/java/com/entra21/primeiroprojetospring/controller/ItemRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring/primeiro-projeto-spring/src/main/java/com/entra21/primeiroprojetospring/view/repository/ItemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Spring/primeiro-projeto-spring/src/main/java/com/entra21/primeiroprojetospring/view/service/ItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/primeiro-projeto-spring/src/main/java/com/entra21/primeiroprojetospring/model/dto/ItemListagemDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/primeiro-projeto-spring/src/main/java/com/entra21/primeiroprojetospring/model/dto/ItemListagemDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/primeiro-projeto-spring/src/main/java/com/entra21/primeiroprojetospring/model/entity/DvdEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/primeiro-projeto-spring/src/main/java/com/entra21/primeiroprojetospring/model/entity/DvdEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/primeiro-projeto-spring/src/main/java/com/entra21/primeiroprojetospring/model/entity/ItemEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/primeiro-projeto-spring/src/main/java/com/entra21/primeiroprojetospring/model/entity/ItemEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring/primeiro-projeto-spring/src/main/java/com/entra21/primeiroprojetospring/model/entity/LivroEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring/primeiro-projeto-spring/src/main/java/com/entra21/primeiroprojetospring/model/entity/LivroEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +45,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/alrpereira/Documents/Git/entra21/Livraria",
+    "last_opened_file_path": "C:/Users/alrpereira/Documents/Git/entra21/Spring",
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>

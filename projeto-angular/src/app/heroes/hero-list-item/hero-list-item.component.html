@@ -1,0 +1,14 @@
+<div>
+    <span *ngIf="!hero.alive">✝</span>
+    <h3 style="display: inline; margin-right: 2px; " [ngStyle]="{'color': (hero.alive === false)? 'gray' : 'black', 
+        'font-style': (hero.alive === false)? 'italic' : 'normal'}"
+        >{{ hero.heroName }}
+    </h3>
+    <small  [ngStyle]="{'color': (hero.universe === 'DC') ? 'blue' : 'red'}"
+    >({{ hero.universe }})</small>
+    <small (click)="showID()" style="cursor: pointer;" title="ver identidade secreta">👁️</small>
+    <small (click)="onEdit()" style="cursor: pointer;" title="Editar">✏️</small>
+    <small  (click)="onDelete()" style="cursor: pointer;" title="Excluir">🗑️</small>
+
+
+</div>
